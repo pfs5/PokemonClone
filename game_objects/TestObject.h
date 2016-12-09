@@ -16,6 +16,7 @@ private:
     float _stepSize;
 
 private:
+    void init(float x, float y);
     void getInput();
 
 public:

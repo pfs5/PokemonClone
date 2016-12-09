@@ -7,12 +7,15 @@
 
 #include <string>
 #include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
 
 class Map {
 public:
     void loadMap(std::string name);
+    void draw(sf::RenderWindow &window);
 private:
-    sf::Sprite _map;
+    sf::Texture _mapTexture;
+    sf::Sprite _mapSprite;
 };
 
 

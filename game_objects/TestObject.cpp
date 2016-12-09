@@ -12,10 +12,14 @@ sf::RectangleShape _rectangle;
 sf::Vector2f _speed;
 
 TestObject::TestObject() {
-    TestObject(0, 0);
+    init(Settings::WINDOW_WIDTH() / 2 - 15, Settings::WINDOW_HEIGHT() / 2 - 15);
 }
 
 TestObject::TestObject(float x, float y) {
+    init(x, y);
+}
+
+void TestObject::init(float x, float y) {
     // Transform
     _position = {x, y};
 
@@ -32,7 +36,7 @@ void TestObject::input() {
 }
 
 void TestObject::update() {
-    getInput();
+//    getInput();
 
     // Move
     _rectangle.setPosition(_position);
