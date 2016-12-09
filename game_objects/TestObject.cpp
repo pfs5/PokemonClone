@@ -34,10 +34,6 @@ void TestObject::input() {
 void TestObject::update() {
     getInput();
 
-    // Translate
-    _speed += GRAVITY;
-    _position += _speed;
-
     // Move
     _rectangle.setPosition(_position);
 }
