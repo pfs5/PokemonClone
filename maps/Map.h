@@ -12,10 +12,14 @@
 class Map {
 public:
     void loadMap(std::string name);
-    void draw(sf::RenderWindow &window);
+    void drawTop(sf::RenderWindow &window);
+    void drawBottom(sf::RenderWindow &window);
 private:
-    sf::Texture _mapTexture;
-    sf::Sprite _mapSprite;
+    sf::Texture _mapTextureTop;
+    sf::Sprite _mapSpriteTop;
+
+    sf::Texture _mapTextureBottom;
+    sf::Sprite _mapSpriteBottom;
 };
 
 

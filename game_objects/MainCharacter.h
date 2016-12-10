@@ -10,7 +10,7 @@
 
 class MainCharacter: public Character {
 public:
-    MainCharacter(const std::string &name);
+    MainCharacter(const std::string &name, sf::Vector2f startPosition);
     void update();
 };
 

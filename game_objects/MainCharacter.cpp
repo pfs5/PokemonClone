@@ -3,14 +3,23 @@
 //
 
 #include <iostream>
+#include <SFML/Window/Keyboard.hpp>
 #include "MainCharacter.h"
 #include "../settings/Settings.h"
 
-MainCharacter::MainCharacter(const std::string &name) : Character(name) {
-    // Set center position
-    _charSprite.setPosition(Settings::WINDOW_WIDTH() / 2 - sizeX / 2, Settings:: WINDOW_HEIGHT() / 2 - sizeY / 2);
+MainCharacter::MainCharacter(const std::string &name, sf::Vector2f startPosition) : Character(name, startPosition) {
 }
 
 void MainCharacter::update() {
-    Character::update();
+    if (_moving) {
+        Character::update();
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
+        startMove(Up);
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+        startMove(Left);
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+        startMove(Down);
+    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+        startMove(Right);
+    }
 }

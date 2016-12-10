@@ -10,25 +10,44 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include "GameObject.h"
 
-class Character: public GameObject {
+class Character : public GameObject {
 public:
-    Character(std::string name);
+    Character(std::string name, sf::Vector2f initPosition);
+
     void input();
+
     void update();
+
     void draw(sf::RenderWindow *window);
+
+    sf::Vector2f getPosition();
 
 protected:
     static const int sizeX = 16;
     static const int sizeY = 19;
 
+    // Drawing
     sf::Texture _charTexture;
     sf::Sprite _charSprite;
 
-    enum Direction {Up, Down, Left, Right};
+    // Movement
+    enum Direction {
+        Up, Down, Left, Right
+    };
     Direction _direction;
-    int _counter;
+    int _counter;           // sprite counter
+    float _moveCounter;     // move sequence counter
+    int _moveState;         // moving sprite select
 
+    // Flags
+    bool _turning;          // turning flag
+    bool _moving;           // movement flag
+
+    // Functions
     void move(Direction dir);
+
+    void startMove(Direction dir);
+
     int getDirectionIndex(Direction dir);
 };
 
