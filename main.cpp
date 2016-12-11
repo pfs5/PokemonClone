@@ -35,12 +35,13 @@ void Setup() {
     window->setPosition(centerWindow);
 
     // Initiate test game objects
-    sf::Vector2f mainCharPosition = {20 * Settings::BASE(), 30 * Settings::BASE()};
+    sf::Vector2f mainCharPosition = {25 * Settings::BASE(), 30 * Settings::BASE()};
     mainCharacter = new MainCharacter("char1", mainCharPosition);
     gameObjects.push_back(mainCharacter);
 
     // Load map
-    gameMap.loadMap("route1");
+//    gameMap.loadMap("route1");
+    gameMap.loadMap("vermillion");
     direction = Down;
 
     // Setup view

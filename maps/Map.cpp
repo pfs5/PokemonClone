@@ -9,7 +9,7 @@
 
 unsigned short Map::getColorData(unsigned int color) {
     switch (color) {
-        case 1077424383:
+        case 255:
             return 1;           // collision
         default:
             return 0;           // no data
@@ -61,6 +61,7 @@ void Map::loadMapData(std::string name) {
             // TODO
             sf::Color pixel = image.getPixel(x, y);
             row.push_back(Map::getColorData(pixel.toInteger()));
+            std::cout << pixel.toInteger() << std::endl;
         }
         _mapData.push_back(row);
     }
