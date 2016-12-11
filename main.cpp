@@ -15,7 +15,7 @@ enum Direction {
 
 // Global variables
 Map gameMap;                                // current map
-MainCharacter *mainCharacter;               // main chracater
+MainCharacter *mainCharacter;               // main character
 std::vector<GameObject *> gameObjects;      // game objects
 sf::RenderWindow *window;                   // main window
 sf::View *view;                             // current view
@@ -57,6 +57,13 @@ void Input() {
 void Update() {
     for (int i = 0; i < gameObjects.size(); i++) {
         gameObjects[i]->update();
+
+        sf::Vector2f pos1 = gameObjects[i]->getPosition() + sf::Vector2f{0.f, 3.f * Settings::SCALE()};
+        sf::Vector2f pos2 =
+                pos1 + sf::Vector2f{Settings::BASE() * Settings::SCALE() - 1, Settings::BASE() * Settings::SCALE() - 1};
+        if (gameMap.checkCollision(pos1, pos2)) {
+            gameObjects[i]->undo();
+        }
     }
 
     // Update view

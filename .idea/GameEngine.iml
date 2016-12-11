@@ -2,8 +2,9 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/colliders/Collider.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/settings/Settings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/cmake_modules/FindSFML.cmake" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/game_objects/GameObject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/game_objects/Character.cpp" isTestSource="false" />
@@ -13,9 +14,9 @@
       <sourceFolder url="file://$MODULE_DIR$/game_objects/GameObject.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/game_objects/MainCharacter.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/game_objects/TestObject.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/settings/Settings.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/maps/Map.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/maps/Map.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/cmake_modules/FindSFML.cmake" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

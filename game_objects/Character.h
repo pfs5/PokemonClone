@@ -9,6 +9,7 @@
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Sprite.hpp>
 #include "GameObject.h"
+#include "../colliders/Collider.h"
 
 class Character : public GameObject {
 public:
@@ -21,6 +22,13 @@ public:
     void draw(sf::RenderWindow *window);
 
     sf::Vector2f getPosition();
+
+    unsigned int getSizeX() {return sizeX;}
+    unsigned int getSizeY() {return sizeY;}
+
+    // Collider methods
+    void undo();
+    bool checkCollision(Collider &other);
 
 protected:
     static const int sizeX = 16;
@@ -39,6 +47,9 @@ protected:
     float _moveCounter;     // move sequence counter
     int _moveState;         // moving sprite select
 
+    // Position saving
+    sf::Vector2f _lastPosition;
+
     // Flags
     bool _turning;          // turning flag
     bool _moving;           // movement flag
@@ -49,6 +60,7 @@ protected:
     void startMove(Direction dir);
 
     int getDirectionIndex(Direction dir);
+
 };
 
 

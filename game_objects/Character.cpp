@@ -35,6 +35,8 @@ Character::Character(std::string name, sf::Vector2f startPosition) {
     _moveCounter = 0;
     _moveState = 1;
 
+    _lastPosition = getPosition();
+
     std::cerr << "Successfully loaded character \"" + name + "\"." << std::endl;
 
 }
@@ -44,16 +46,9 @@ void Character::input() {
 }
 
 void Character::update() {
+    _lastPosition = getPosition();
     if (_moving) {
         move(_direction);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        startMove(Up);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        startMove(Left);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        startMove(Down);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        startMove(Right);
     }
 }
 
@@ -129,5 +124,14 @@ int Character::getDirectionIndex(Character::Direction dir) {
 
 sf::Vector2f Character::getPosition() {
     return _charSprite.getPosition();
+}
+
+void Character::undo() {
+    _charSprite.setPosition(_lastPosition);
+}
+
+bool Character::checkCollision(Collider &other) {
+    // TODO
+    return false;
 }
 
