@@ -12,16 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52b9aac4-1e0d-408d-ac89-ca1c60fb31c5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/maps/route1.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_objects/Character.cpp" afterPath="$PROJECT_DIR$/game_objects/Character.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_objects/Character.h" afterPath="$PROJECT_DIR$/game_objects/Character.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_objects/MainCharacter.cpp" afterPath="$PROJECT_DIR$/game_objects/MainCharacter.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/game_objects/MainCharacter.h" afterPath="$PROJECT_DIR$/game_objects/MainCharacter.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Map.cpp" afterPath="$PROJECT_DIR$/maps/Map.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/maps/Map.h" afterPath="$PROJECT_DIR$/maps/Map.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings/Settings.h" afterPath="$PROJECT_DIR$/settings/Settings.h" />
     </list>
     <ignored path="GameEngine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="132" column="20" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="20" />
+            <state relative-caret-position="608">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
                 <element signature="e#72#102#0" expanded="true" />
@@ -64,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Character.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Character.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/game_objects/Character.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="502">
               <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
               <folding>
                 <element signature="e#42#61#0" expanded="true" />
@@ -142,9 +133,9 @@
         <option value="$PROJECT_DIR$/game_objects/MainCharacter.cpp" />
         <option value="$PROJECT_DIR$/maps/Map.h" />
         <option value="$PROJECT_DIR$/maps/Map.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/game_objects/Character.h" />
         <option value="$PROJECT_DIR$/game_objects/Character.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
   </component>
@@ -471,12 +462,12 @@
       <workItem from="1481282267393" duration="954000" />
       <workItem from="1481286055154" duration="10375000" />
       <workItem from="1481315068087" duration="6388000" />
-      <workItem from="1481387012894" duration="14727000" />
+      <workItem from="1481387012894" duration="17994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49897000" />
+    <option name="totallyTimeSpent" value="53164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="24" width="1364" height="746" extended-state="6" />
@@ -869,22 +860,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/game_objects/GameObject.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings/Settings.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/maps/Map.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -899,17 +874,6 @@
           <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
             <element signature="e#42#78#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="132" column="20" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-            <element signature="e#72#102#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -932,11 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/sprites/char1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game_objects/Character.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -947,12 +906,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/sprites/char1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/game_objects/Character.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="502">
           <caret line="90" column="36" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
           <folding>
             <element signature="e#42#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_objects/GameObject.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings/Settings.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#72#102#0" expanded="true" />
           </folding>
         </state>
       </provider>

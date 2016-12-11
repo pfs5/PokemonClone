@@ -15,6 +15,7 @@ enum Direction {
 
 // Global variables
 Map gameMap;                                // current map
+MainCharacter *mainCharacter;               // main chracater
 std::vector<GameObject *> gameObjects;      // game objects
 sf::RenderWindow *window;                   // main window
 sf::View *view;                             // current view
@@ -34,8 +35,8 @@ void Setup() {
     window->setPosition(centerWindow);
 
     // Initiate test game objects
-    sf::Vector2f mainCharPosition = {20*Settings::BASE(), 30*Settings::BASE()};
-    MainCharacter *mainCharacter = new MainCharacter("char1", mainCharPosition);
+    sf::Vector2f mainCharPosition = {20 * Settings::BASE(), 30 * Settings::BASE()};
+    mainCharacter = new MainCharacter("char1", mainCharPosition);
     gameObjects.push_back(mainCharacter);
 
     // Load map
@@ -49,58 +50,6 @@ void Setup() {
     moving = false;
 }
 
-void move(Direction dir) {
-    turning = direction != dir;
-
-    direction = dir;
-    moving = true;
-    moveCounter = 0;
-}
-
-void updateView() {
-
-    if (moving) {
-        // Move
-        float moveStep = Settings::BASE() / Settings::GAME_SPEED() * Settings::SCALE();
-        if (!turning) {
-            switch (direction) {
-                case Up:
-                    view->move(0, -moveStep);
-                    break;
-                case Down:
-                    view->move(0, moveStep);
-                    break;
-                case Left:
-                    view->move(-moveStep, 0);
-                    break;
-                case Right:
-                    view->move(moveStep, 0);
-                    break;
-            }
-        }
-        window->setView(*view);
-
-        // Increase counter and check
-        moveCounter += (Settings::BASE() / Settings::GAME_SPEED());
-        if (moveCounter >= Settings::BASE()) {
-            moving = false;
-        }
-
-        return;
-    }
-
-    // Get input
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
-        move(Up);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
-        move(Left);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
-        move(Down);
-    } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
-        move(Right);
-    }
-}
-
 void Input() {
 
 }
@@ -110,7 +59,9 @@ void Update() {
         gameObjects[i]->update();
     }
 
-    updateView();
+    // Update view
+    view->setCenter(mainCharacter->getPosition());
+    window->setView(*view);
 }
 
 void Draw() {
@@ -123,7 +74,7 @@ void Draw() {
     }
 
     // Draw top map
-    gameMap.drawTop(* window);
+    gameMap.drawTop(*window);
 }
 
 
