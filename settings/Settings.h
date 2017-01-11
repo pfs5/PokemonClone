@@ -8,7 +8,7 @@
 class Settings {
 public:
     // Paths
-    static std::string PROJECT_DIR() {return "/home/patrik/Source/C++/GameEngine/";}
+    static std::string PROJECT_DIR() {return "/home/patrik/Source/C++/PokemonClone/";}
     static const std::string MAP_TYPE() {return ".png";}
 
     // Window

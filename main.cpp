@@ -86,7 +86,8 @@ void Draw() {
 }
 
 
-int main() {
+int main(int argc, char * argv[]) {
+    std::cerr << argv[0] << std::endl;
     Setup();
 
     sf::Clock clock;
